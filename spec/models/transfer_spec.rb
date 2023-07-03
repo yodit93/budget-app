@@ -11,16 +11,16 @@ RSpec.describe Transfer, type: :model do
 
   it 'should name be present' do
     @transfer.name = nil
-    expect(@transfer).to be_valid
+    expect(@transfer).to_not be_valid
   end
 
   it 'should amount be present' do
     @transfer.amount = nil
-    expect(@transfer).to be_valid
+    expect(@transfer).to_not be_valid
   end
 
   it 'should amount be numeric and greater than or equal to 0.1' do
     @transfer.amount = 'abc'
-    expect(@transfer).to be_valid
+    expect(@transfer).to_not be_valid
   end
 end
