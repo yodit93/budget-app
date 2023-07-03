@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_03_145416) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_153347) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,13 +23,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_145416) do
     t.index ["author_id"], name: "index_categories_on_author_id"
   end
 
+  create_table "category_transfers", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "transfer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_transfers_on_category_id"
+    t.index ["transfer_id"], name: "index_category_transfers_on_transfer_id"
+  end
+
   create_table "transfers", force: :cascade do |t|
     t.string "name"
     t.decimal "amount"
-    t.bigint "user_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_transfers_on_user_id"
+    t.index ["author_id"], name: "index_transfers_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,5 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_145416) do
   end
 
   add_foreign_key "categories", "users", column: "author_id", on_delete: :cascade
-  add_foreign_key "transfers", "users"
+  add_foreign_key "category_transfers", "categories"
+  add_foreign_key "category_transfers", "transfers"
+  add_foreign_key "transfers", "users", column: "author_id", on_delete: :cascade
 end
