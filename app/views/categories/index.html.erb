@@ -14,4 +14,7 @@
             </li>
         <%end%>
     </ul>
+    <%= content_tag :div, class: 'text-center' do%>
+        <%= link_to 'Add category', new_category_path, class: 'btn btn-secondary' %>
+    <%end%>
 </div>
