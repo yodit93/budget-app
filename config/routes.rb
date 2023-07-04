@@ -13,7 +13,9 @@ Rails.application.routes.draw do
     root 'categories#index', as: :authenticated_root
 
     # Other category routes for logged-in users
-    resources :categories, only: [:index, :new, :create]
+    resources :categories, only: [:index, :new, :create] do
+      resources :transfers, only: [:index, :new, :create]
+    end
   end
 end
 
