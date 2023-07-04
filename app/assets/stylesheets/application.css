@@ -26,3 +26,27 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: rgb(235, 235, 241);
+}
+
+.cat-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+}
+
+.cat-name, .cat-total {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cat-date {
+    font-size: 0.8rem;
+}
+

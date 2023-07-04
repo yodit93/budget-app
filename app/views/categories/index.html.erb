@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <ul>
+        <% @categories.each do |category|%>
+            <%@total_amount = category.transfers.sum(:amount)%>
+            <li class="d-flex flex-row justify-content-between align-items-center card-body mb-3" style="height: 20vh">
+                <div class="d-flex flex-row">
+                    <img src=<%= category.icon%> class="cat-img">
+                    <div class="d-flex flex-column justify-content-end">
+                        <h4 class="cat-name"><%= category.name%></h4>
+                        <span class="cat-date"><%= category.created_at.strftime('%d %B %Y')%></span>
+                    </div>
+                </div>
+                <div class="cat-total fw-bold">$<%= @total_amount%></div>
+            </li>
+        <%end%>
+    </ul>
+</div>
