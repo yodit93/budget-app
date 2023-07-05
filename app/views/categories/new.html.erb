@@ -1,6 +1,9 @@
 <div class="container row justify-content-center align-items-center mt-5">
     <div class="col-md-6">
       <div class="form-container">
+        <%= link_to categories_path do %>
+            <i class="fa fa-arrow-left text-dark back-arrow"></i>
+        <%end%>
         <h2 class="h2 text-center">Add New Category</h2>
           <%= form_with(model: @category, url: categories_path, method: :post) do |form| %>
             <div class="mb-3">
@@ -12,7 +15,7 @@
                 <%= form.text_field :icon, class: 'form-control' %>
             </div>
             <div>
-                <%= form.submit "Save", class: "btn btn-secondary" %>
+                <%= form.submit "Create Category", class: "btn btn-secondary" %>
             </div>
         <%end%>
       </div>
