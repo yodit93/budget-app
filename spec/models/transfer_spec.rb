@@ -6,7 +6,7 @@ RSpec.describe Transfer, type: :model do
     User.destroy_all
     @user = User.create(name: 'user', email: 'user@gmail.com', password: '123456', confirmed_at: Time.current)
     sign_in @user
-    @transfer = Transfer.create(name: 'transfer', amount: 100, user: @user)
+    @transfer = Transfer.create(name: 'transfer', amount: 100, author: @user)
   end
 
   it 'should name be present' do

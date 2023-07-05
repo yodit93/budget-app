@@ -16,6 +16,6 @@ RSpec.describe CategoryTransfer, type: :model do
   end
   it 'is valid with valid attributes' do
     expect(@category_transfer.category).equal?(@category)
-    expect(@category_transfer.category.name). to eq(@category.name)
+    expect(@category_transfer.category.name).to eq(@category.name)
   end
 end

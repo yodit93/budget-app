@@ -14,89 +14,91 @@
  *= require_self
  */
 
- * {
-    font-family: 'Playfair Display', serif;
- }
- .app-name {
-    font-style: italic;
-    font-weight: 800;
- }
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+.app-name {
+  font-style: italic;
+  font-weight: 800;
+}
 
 .height {
-    height: 100vh;
+  height: 100vh;
 }
 
 .margin-top {
-    margin-top: 12rem;
+  margin-top: 12rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 li {
-    background-color: rgb(235, 235, 241);
+  background-color: rgb(235, 235, 241);
 }
 
 .cat-img {
-    width: 80px;
-    height: 80px;
-    margin-right: 1rem;
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
 }
 
-.cat-name, .cat-total {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+.cat-name,
+.cat-total {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .cat-date {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .cat-btn-cont {
-    width: 100%;
-    background-color: #5fb523;
-    height: 13vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  background-color: #5fb523;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cat-btn {
-    width: 90%;
-    height: 80%;
-    border: 2px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 90%;
+  height: 80%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trans-date {
-   font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .trans-header {
-    background-color: #3778c2;
-    height: 13vh;
-    display: flex;
-    align-items: center;
-    padding-top: 1rem;
+  background-color: #3778c2;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
 }
 
 .back-arrow {
-    margin-right: 7rem;
+  margin-right: 7rem;
 }
 
 .trans-total {
-    font-size: 1rem;
-    margin: 0 0 1.5rem 4rem;
+  font-size: 1rem;
+  margin: 0 0 1.5rem 4rem;
 }
 
 .trans-font {
-    font-size: 1rem;
+  font-size: 1rem;
 }

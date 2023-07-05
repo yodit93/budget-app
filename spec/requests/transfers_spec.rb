@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Transfers", type: :request do
+RSpec.describe 'Transfers', type: :request do
   before(:each) do
     @user = User.first
     sign_in @user
@@ -8,9 +8,8 @@ RSpec.describe "Transfers", type: :request do
     @transfer = Transfer.create(name: 'transfer-test', amount: 100, author: @user)
     CategoryTransfer.create(category: @category, transfer: @transfer)
     @transfers = @category.transfers.all
-   
   end
-  describe "GET /index" do
+  describe 'GET /index' do
     before(:each) do
       get category_transfers_path(@category)
     end
@@ -34,14 +33,13 @@ RSpec.describe "Transfers", type: :request do
       expect(response.body).to include(@transfers[0].name)
     end
     it 'should include transfer date' do
-      expect(response.body).to include(@transfers[0].created_at.strftime("%d %B %Y at %l:%M %P"))
+      expect(response.body).to include(@transfers[0].created_at.strftime('%d %B %Y at %l:%M %P'))
     end
     it 'should include "New Transfer" button' do
       expect(response.body).to include('New Transfer')
     end
-    
   end
-  describe "GET /new" do
+  describe 'GET /new' do
     before(:each) do
       get new_category_transfer_path(@category)
     end
@@ -70,9 +68,10 @@ RSpec.describe "Transfers", type: :request do
       expect(response.body).to include('Create Transfer')
     end
   end
-  describe "POST /create" do
+  describe 'POST /create' do
     before(:each) do
-      post category_transfers_path(@category), params: { transfer: { name: 'test-transfer', amount: 100, author_id: @user.id, category_id: @category.id} }
+      post category_transfers_path(@category),
+           params: { transfer: { name: 'test-transfer', amount: 100, author_id: @user.id, category_id: @category.id } }
     end
     it 'redirects to category_transfers_path' do
       expect(response).to redirect_to(category_transfers_path(@category))
