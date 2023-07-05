@@ -1,18 +1,21 @@
 class TransfersController < ApplicationController
+    before_action :authenticate_user!
+    load_and_authorize_resource
     def index
         @category = Category.find(params[:category_id])
-        @transfers = @category.transfers.all.order("created_at DESC")
+        @transfers = @category.transfers.all.order(created_at: :desc)
     end
     def new
         @categories = Category.all
         @transfer = Transfer.new
     end
     def create
-        @category = Category.find(params[:category_id])
-        @transfer = Transfer.new(transfer_params)
-        if @transfer.save
+        category = Category.find(params[:transfer][:category_id])
+        transfer = current_user.transfers.new(transfer_params)
+        CategoryTransfer.create(category: category, transfer: transfer)
+        if transfer.save
             flash[:notice] = "Transfer was successfully created."
-            redirect_to category_transfers_path(@category)
+            redirect_to category_transfers_path(category)
         else
             render 'new'
         end
