@@ -35,6 +35,7 @@ RSpec.configure do |config|
 
   config.include Devise::Test::IntegrationHelpers, type: :model
   config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :system
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
