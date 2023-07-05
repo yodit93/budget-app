@@ -72,7 +72,7 @@ RSpec.describe "Transfers", type: :request do
   end
   describe "POST /create" do
     before(:each) do
-      post category_transfers_path(@category), params: { transfer: { name: 'test-transfer', amount: 100, author_id: @user.id} }
+      post category_transfers_path(@category), params: { transfer: { name: 'test-transfer', amount: 100, author_id: @user.id, category_id: @category.id} }
     end
     it 'redirects to category_transfers_path' do
       expect(response).to redirect_to(category_transfers_path(@category))
