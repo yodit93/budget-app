@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
+    before_action :authenticate_user!
+    load_and_authorize_resource
+
     def index
-        @categories = Category.all
+        @categories = current_user.categories.all
     end
     def new
         @category = Category.new
