@@ -1,4 +1,5 @@
-<div class="container mt-5">
+<%= render partial: 'shared/nav'%>
+<div class="container mt-3">
     <ul>
         <% @categories.each do |category|%>
             <li>
@@ -6,7 +7,7 @@
             </li>
         <%end%>
     </ul>
-    <%= content_tag :div, class: 'text-center' do%>
-        <%= link_to 'New Category', new_category_path, class: 'btn btn-secondary' %>
+    <%= content_tag :div, class: 'text-center cat-btn-cont' do%>
+        <div class="cat-btn"><%= link_to 'New Category', new_category_path, class: 'btn text-light' %></div>
     <%end%>
 </div>

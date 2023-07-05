@@ -14,6 +14,14 @@
  *= require_self
  */
 
+ * {
+    font-family: 'Playfair Display', serif;
+ }
+ .app-name {
+    font-style: italic;
+    font-weight: 800;
+ }
+
 .height {
     height: 100vh;
 }
@@ -50,6 +58,24 @@ li {
     font-size: 0.8rem;
 }
 
+.cat-btn-cont {
+    width: 100%;
+    background-color: #5fb523;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-btn {
+    width: 90%;
+    height: 80%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .trans-date {
    font-size: 0.8rem;
 }
@@ -69,4 +95,8 @@ li {
 .trans-total {
     font-size: 1rem;
     margin: 0 0 1.5rem 4rem;
+}
+
+.trans-font {
+    font-size: 1rem;
 }
