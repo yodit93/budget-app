@@ -50,6 +50,23 @@ li {
     font-size: 0.8rem;
 }
 
-.add-cat {
-   
+.trans-date {
+   font-size: 0.8rem;
+}
+
+.trans-header {
+    background-color: #3778c2;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.back-arrow {
+    margin-right: 7rem;
+}
+
+.trans-total {
+    font-size: 1rem;
+    margin: 0 0 1.5rem 4rem;
 }
