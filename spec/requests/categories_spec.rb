@@ -40,7 +40,7 @@ RSpec.describe "Categories", type: :request do
       expect(response.body).to include('class="form-label"')
       expect(response.body).to include('class="form-control"')
       expect(response.body).to include('class="btn btn-secondary"')
-      expect(response.body).to include('Save')
+      expect(response.body).to include('Create Category')
     end
 
   end
