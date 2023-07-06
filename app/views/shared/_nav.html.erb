@@ -1,11 +1,13 @@
 <nav class="container navbar navbar-expand-md navbar-light justify-content-between" style="background-color: #3778c2; height: 15vh">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-    <span class="navbar-toggler-icon"></span>
+    <span><%= left%></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
     </ul>
   </div>
-  <a class="navbar-brand text-light fs-3 fw-bold" href="#">Categories</a>
-  <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-link text-light fs-5 fw-bold', style: 'text-decoration: none;' %>
+  <a class="navbar-brand text-light fs-3 fw-bold" href="#"><%= header%></a>
+  <div>
+    <%= right%>
+  </div>
 </nav>

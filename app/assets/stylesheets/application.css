@@ -90,10 +90,6 @@ li {
   padding-top: 1rem;
 }
 
-.back-arrow {
-  margin-right: 7rem;
-}
-
 .trans-total {
   font-size: 1rem;
   margin: 0 0 1.5rem 4rem;
@@ -102,3 +98,15 @@ li {
 .trans-font {
   font-size: 1rem;
 }
+
+.forgot {
+  margin-left: 5rem;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* .form-control {
+  border: none;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+} */
