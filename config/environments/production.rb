@@ -90,14 +90,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { host: 'https://budget-app-f1tr.onrender.com' }
-  config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.elasticemail.com',
-    port: 2525,
-    user_name: 'yoditabebe9391@gmail.com',
-    password: '5512ad905013ff700c4c0293d30cdf81',
-  }
+  
 end
