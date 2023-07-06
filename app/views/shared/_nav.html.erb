@@ -6,6 +6,6 @@
     <ul class="navbar-nav ml-auto">
     </ul>
   </div>
-  <a class="navbar-brand text-light" href="#">Categories</a>
-  <i class="fa fa-search text-light" aria-hidden="true"></i>
+  <a class="navbar-brand text-light fs-3 fw-bold" href="#">Categories</a>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-link text-light fs-5 fw-bold', style: 'text-decoration: none;' %>
 </nav>
