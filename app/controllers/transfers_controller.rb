@@ -3,7 +3,7 @@ class TransfersController < ApplicationController
   load_and_authorize_resource
   def index
     @category = Category.find(params[:category_id])
-    @transfers = @category.transfers.all.order(created_at: :desc)
+    @transfers = @category.transfers.where(author_id: current_user.id).order(created_at: :desc)
   end
 
   def new
