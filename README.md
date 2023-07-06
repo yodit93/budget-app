@@ -1,8 +1,6 @@
-<a name="readme-top"></a>
-
 <div align="center">
 
-  <h1><b>Budget App</b></h1>
+  <h3><b>SavEarly</b></h3>
 
 </div>
 
@@ -14,6 +12,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [📺 Presentation](#presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -26,6 +26,7 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -34,39 +35,48 @@
 
 **[Budget App]** is a web application that allows users to create a budget and track their expenses. The user can create a budget category and add expenses to it. 
 
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li>HTML(erb), CSS</li>
-  </ul>
-</details>
+> [Ruby on Rails](https://guides.rubyonrails.org/) (simplify as Rails) is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages. It encourages and facilitates the use of web standards such as JSON or XML for data transfer and HTML, CSS and JavaScript for user interfacing.
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li>Ruby</li>
+    <li><a href="https://guides.rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li>Postgress</li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
- - **User can sign-up**
-- **User login**
-- **User can manage their budget with category.**
-- **User can add category.**
-- **User can add transaction for the selected category.**
+
+- **User Authentication**
+- **user can manage budget with Categories**
+- **Use can add Transactions**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📺 Presentation <a name="presentation"></a>
+
+- [Link to video presentation]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,41 +88,51 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need: any web-browser.
+In order to run this project you need:
+
+- [Ruby and Rails on you operating system eg. for Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04)
+- [Node.js](https://nodejs.dev/en/) installed
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)
+- [PostgreSQL](https://www.postgresql.org/) database installed
 
 ### Setup
 
-Clone this [repository](https://github.com/yodit93/budget-app.git) to your desired folder.
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  https://github.com/yodit93/budget-app.git
+```
 
 ### Install
 
-Install the project dependencies with:
+Install this project with:
 
-    ``
-    bundle install
-    ``
+```sh
+  cd budget-app
+
+  bundle install
+```
 
 ### Usage
 
-**To run the project follow the following instruction:-**
+To run the project, execute the following command:
 
-- Clone this [repository](https://github.com/yodit93/budget-app.git) in your local machine with correct branch.
-- Run following cmds:-
-- **rails db:create**
-- **rails db:migrate**
-- **rails s**
+```sh
+  rails s
+```
 
 ### Run tests
 
 To run tests, run the following command:
-    
-    ``
-    rspec
-    ``
+
+```sh
+  bin/rails rspec spec
+```
 
 ### Deployment
 
-You can deploy this project using: **Not available**.
+You can deploy this project using: Render, Heroku, Netlify, etc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +153,6 @@ You can deploy this project using: **Not available**.
 - [ ] **[Desktop vesrsion]**
 - [ ] **[create functional toggler]**
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -142,7 +161,7 @@ You can deploy this project using: **Not available**.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/yodit93/budget-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +169,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give a ⭐️.
+If you like this project, kindly give me a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,9 +177,7 @@ If you like this project give a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank Microverse.
-- I would also like to thannk the design owner [Gregoire Vella](https://www.behance.net/gregoirevella) for his design.
-
+- I would like to thank [Microverse](https://www.microverse.org/) and [Gregoire Vella](https://www.behance.net/gregoirevella) for design.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
