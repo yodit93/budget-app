@@ -1,0 +1,27 @@
+<div class="container row justify-content-center align-items-center mt-5">
+    <div class="col-md-6">
+      <div class="form-container">
+        <%= link_to category_transfers_path do %>
+            <i class="fa fa-arrow-left text-dark back-arrow"></i>
+        <%end%>
+        <h2 class="h2 text-center">Add New Transfer</h2>
+          <%= form_with(model: @transfer, url: category_transfers_path, method: :post) do |form| %>
+            <div class="mb-3">
+                <%= form.label :name, class: 'form-label' %>
+                <%= form.text_field :name, class: 'form-control' %>
+            </div>
+            <div class="mb-3">
+                <%= form.label :amount, class: 'form-label' %>
+                <%= form.text_field :amount, class: 'form-control' %>
+            </div>
+            <div class="mb-3">
+                <%= form.label :category, class: 'form-label' %>
+                <%= form.select :category_id, @categories.map { |category| [category.name, category.id] }, {}, { class:'form-select'} %>
+            </div>
+            <div class="text-center">
+                <%= form.submit "Create Transfer", class: "btn btn-secondary" %>
+            </div>
+        <%end%>
+      </div>
+    </div>
+  </div>

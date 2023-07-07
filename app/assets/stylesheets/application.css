@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+.app-name {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.height {
+  height: 100vh;
+}
+
+.margin-top {
+  margin-top: 12rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgb(235, 235, 241);
+}
+
+.cat-img {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+.cat-name,
+.cat-total {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cat-date {
+  font-size: 0.8rem;
+}
+
+.cat-btn-cont {
+  width: 100%;
+  background-color: #5fb523;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-btn {
+  width: 90%;
+  height: 80%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trans-date {
+  font-size: 0.8rem;
+}
+
+.trans-header {
+  background-color: #3778c2;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.trans-total {
+  font-size: 1rem;
+  margin: 0 0 1.5rem 4rem;
+}
+
+.trans-font {
+  font-size: 1rem;
+}
+
+.forgot {
+  margin-left: 5rem;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* .form-control {
+  border: none;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+} */

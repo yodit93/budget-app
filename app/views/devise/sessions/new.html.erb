@@ -1,0 +1,22 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div>
+      <%= form_for(resource, as: resource_name, url: session_path(:user)) do |f| %>
+        <%= render partial: 'shared/nav', locals: {
+          left: link_to(root_for_non_logged_in_path) { "<i class='fa fa-arrow-left text-white'></i>".html_safe },
+          header: 'Login',
+          right: f.submit("Log in", class: "btn text-light")
+        } %>
+        <div class="my-3">
+          <%= f.email_field :email, class: "form-control", placeholder: 'Email' %>
+        </div>
+        <div class="my-3">
+          <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: 'Password' %>
+        </div>
+      <% end %>
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class: 'text-secondary forgot' %><br />
+      <% end %>
+    </div>
+  </div>
+</div>

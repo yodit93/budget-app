@@ -1,0 +1,23 @@
+<%= render partial: 'shared/nav', locals: {
+  header: 'Categories',
+  left: '<span class="navbar-toggler-icon"></span>'.html_safe,
+  right: button_to(
+    "Logout",
+    destroy_user_session_path,
+    method: :delete,
+    class: 'btn btn-link text-light fs-5 fw-bold',
+    style: 'text-decoration: none;'
+  )
+} %>
+<div class="container mt-3">
+    <ul>
+        <% @categories.each do |category|%>
+            <li>
+                 <%= render partial: 'shared/category_card', locals: {category: category} %>
+            </li>
+        <%end%>
+    </ul>
+    <%= content_tag :div, class: 'text-center cat-btn-cont' do%>
+        <div class="cat-btn"><%= link_to 'New Category', new_category_path, class: 'btn text-light' %></div>
+    <%end%>
+</div>

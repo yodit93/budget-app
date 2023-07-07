@@ -1,0 +1,24 @@
+<div class="container trans-header text-light mb-3">
+    <%= link_to categories_path do %>
+        <i class="fa fa-arrow-left text-light back-arrow"></i>
+    <%end%>
+    <h1 class="h3 trans-title">Transfers</h1>
+</div>
+<div class="container">
+    <%= render partial: 'shared/category_card', locals: {category: @category}%>
+    <ul>
+        <%@transfers.each do |transfer| %>
+            <li class="mb-3 p-2">
+                <p class="trans-font"><%= transfer.name%></p>
+                <div class="d-flex flex-row align-items-center trans-date">
+                    <i class="fa fa-regular fa-calendar me-3"></i>
+                    <div><%= transfer.created_at.strftime('%d %B %Y at %l:%M %P')%></div>
+                </div>
+            </li>
+        <%end%>
+    </ul>
+    <%= content_tag :div, class: 'text-center cat-btn-cont' do%>
+        <div class="cat-btn"><%= link_to 'New Transfer', new_category_transfer_path(@category), class: 'btn text-light' %></div>
+    <%end%>
+</div>
+
