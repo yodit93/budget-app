@@ -7,7 +7,7 @@ class TransfersController < ApplicationController
   end
 
   def new
-    @categories = Category.all
+    @categories = current_user.categories.all
     @transfer = Transfer.new
   end
 
