@@ -1,0 +1,58 @@
+{
+    "$schema": "https://app.flightcontrol.dev/schema.json",
+    "environments": [
+      {
+        "id": "production",
+        "name": "Production",
+        "region": "af-south-1",
+        "source": {
+          "branch": "dev",
+          "pr": false,
+          "trigger": "push"
+        },
+        "services": [
+          {
+            "id": "rails-app",
+            "name": "Rails App",
+            "buildType": "nixpacks",
+            "cpu": 0.5,
+            "memory": 1,
+            "containerInsights": false,
+            "minInstances": 1,
+            "maxInstances": 1,
+            "versionHistoryCount": 10,
+            "basePath": ".",
+            "installCommand": "bundle install && rails db:migrate",
+            "envVariables": {},
+            "autoscaling": {
+              "cpuThreshold": 70,
+              "memoryThreshold": 70,
+              "cooldownTimerSecs": 300,
+              "requestsPerTarget": 500
+            },
+            "includeEnvVariablesInBuild": true,
+            "type": "fargate",
+            "healthCheckPath": "/",
+            "enableCloudfrontSwr": false,
+            "port": 3000
+          },
+          {
+            "id": "database",
+            "name": "Database",
+            "type": "rds",
+            "instanceSize": "db.t4g.micro",
+            "private": false,
+            "storage": 20,
+            "maxStorage": 100,
+            "autoUpgradeMinorVersions": true,
+            "applyChangesImmediately": false,
+            "deletionProtection": false,
+            "connectionStringEnvVarName": "DATABASE_URL",
+            "engine": "postgres",
+            "engineVersion": "15"
+          }
+        ]
+      }
+    ]
+  }
+  
