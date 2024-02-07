@@ -32,3 +32,4 @@
 
 # Ignore yarn files
 node_modules/
+/config/credentials/production.key
