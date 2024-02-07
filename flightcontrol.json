@@ -4,7 +4,7 @@
       {
         "id": "production",
         "name": "Production",
-        "region": "af-south-1",
+        "region": "us-east-1",
         "source": {
           "branch": "dev",
           "pr": false,
