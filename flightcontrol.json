@@ -4,7 +4,6 @@
       {
         "id": "production",
         "name": "Production",
-        "buildCommand": "rails db:migrate",
         "region": "us-east-1",
         "source": {
           "branch": "dev",
@@ -16,6 +15,7 @@
             "id": "rails-app",
             "name": "Rails App",
             "buildType": "nixpacks",
+            "buildCommand": "bundle install &&  bundle exec rails db:migrate && bundle exec rake assets:precompile",
             "cpu": 0.5,
             "memory": 1,
             "containerInsights": false,
