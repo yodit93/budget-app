@@ -15,7 +15,7 @@
             "id": "rails-app",
             "name": "Rails App",
             "buildType": "nixpacks",
-            "buildCommand": "rails db:migrate",
+            "buildCommand": "bundle install &&  bundle exec rails db:migrate && bundle exec rake assets:precompile",
             "cpu": 0.5,
             "memory": 1,
             "containerInsights": false,
@@ -23,7 +23,7 @@
             "maxInstances": 1,
             "versionHistoryCount": 10,
             "basePath": ".",
-            "installCommand": "bundle install",
+            "installCommand": "bundle install && rails db:migrate",
             "envVariables": {},
             "autoscaling": {
               "cpuThreshold": 70,
