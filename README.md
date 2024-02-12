@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://budget-app-f1tr.onrender.com)
+- [Live Demo](https://d1tz1bjmhejm36.cloudfront.net/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
