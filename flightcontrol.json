@@ -4,6 +4,7 @@
       {
         "id": "production",
         "name": "Production",
+        "buildCommand": "rails db:migrate",
         "region": "us-east-1",
         "source": {
           "branch": "dev",
